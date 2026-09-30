@@ -32,7 +32,10 @@ jobs:
         id: check
         env: {BASE_SHA: "${{ github.event.pull_request.base.sha }}"}
         run: |
-          git show "$BASE_SHA:data/words.txt" > "$RUNNER_TEMP/base-words.txt"
+          # A base from before the move into data/ still keeps the file at the repository root.
+          base_path=data/words.txt
+          git cat-file -e "$BASE_SHA:$base_path" 2>/dev/null || base_path=words.txt
+          git show "$BASE_SHA:$base_path" > "$RUNNER_TEMP/base-words.txt"
           set +e
           msime/target/release/msime-dict-build check-words --base "$RUNNER_TEMP/base-words.txt" --head data/words.txt \
             --msime-db "$RUNNER_TEMP/msime.db" --json "$RUNNER_TEMP/report.json" --markdown "$RUNNER_TEMP/summary.md"
