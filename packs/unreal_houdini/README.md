@@ -1,7 +1,6 @@
 # Unreal Engine 与 Houdini 专业词库
 
-面向 Unreal Engine、Houdini 和 Houdini Engine for Unreal 技术美术工作流的可选词库。
-当前包含中文候选、带官方大小写的英文候选，以及中英双向术语释义。
+面向 Unreal Engine、Houdini 和 Houdini Engine for Unreal 技术美术工作流的可选词库。当前包含中文候选、带官方大小写的英文候选，以及中英双向术语释义。
 
 ## 导入
 
@@ -10,12 +9,9 @@
 1. 选择拼音词库的“编码导入”，导入 `quanpin.txt`。
 2. 选择英文词库的“导入”，导入 `english.txt`。
 
-中文文件使用 `词语<Tab>全拼<Tab>权重`，英文文件使用
-`输入键<Tab>显示内容<Tab>权重`。两个文件故意不含标题或注释，避免设置程序把说明文字当作词条。
+中文文件使用 `词语<Tab>全拼<Tab>权重`，英文文件使用 `输入键<Tab>显示内容<Tab>权重`。两个文件故意不含标题或注释，避免设置程序把说明文字当作词条。
 
-`translations.txt` 是完整的术语对照审校稿。适合全局显示、歧义较小的条目已经同步到仓库根目录的
-`translations.txt`，会随官方词库构建进入候选窗翻译；`UE`、`TOP`、`USD`、`Karma` 等有明显歧义的
-短词只保留在本专业包中，不覆盖所有用户的通用释义。
+`translations.txt` 是完整的术语对照审校稿。适合全局显示、歧义较小的条目已经同步到仓库的 `data/translations.txt`，会随官方词库构建进入候选窗翻译；`UE`、`TOP`、`USD`、`Karma` 等有明显歧义的短词只保留在本专业包中，不覆盖所有用户的通用释义。
 
 ## 收录原则
 

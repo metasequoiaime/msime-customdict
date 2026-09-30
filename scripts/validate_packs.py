@@ -185,7 +185,7 @@ def main() -> int:
         return 1
     pronunciations = load_character_pronunciations()
     errors: list[str] = []
-    root_translations = REPOSITORY_ROOT / "translations.txt"
+    root_translations = REPOSITORY_ROOT / "data" / "translations.txt"
     if root_translations.exists():
         root_errors, root_sources = validate_translations(root_translations)
         errors.extend(root_errors)
